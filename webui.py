@@ -28,7 +28,7 @@ for path in site.getsitepackages():
         site_packages_roots.append(path)
 if(site_packages_roots==[]):site_packages_roots=["%s/runtime/Lib/site-packages" % now_dir]
 #os.environ["OPENBLAS_NUM_THREADS"] = "4"
-os.environ["no_proxy"] = "localhost, 127.0.0.1, ::1"
+os.environ["no_proxy"] = "localhost, 127.0.0.1, :9874"
 os.environ["all_proxy"] = ""
 for site_packages_root in site_packages_roots:
     if os.path.exists(site_packages_root):
